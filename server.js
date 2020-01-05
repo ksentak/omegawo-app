@@ -4,6 +4,7 @@ var bodyParser = require("body-parser")
 var app = express()
 var mongoose = require("mongoose")
 const path = require("path");
+require("dotenv").config();
 var port = process.env.PORT || 5000
 
 app.use(bodyParser.json())
@@ -14,7 +15,7 @@ app.use(
   })
 )
 
-const mongoURI = "mongodb://localhost:27017/mernloginreg"
+const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/mernloginreg"
 
 mongoose
  .connect(mongoURI, {useNewUrlParser: true})
