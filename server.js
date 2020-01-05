@@ -15,10 +15,11 @@ app.use(
   })
 )
 
-const mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/mernloginreg"
+// DB Config
+const db = require("./config/keys").mongoURI;
 
 mongoose
- .connect(mongoURI, {useNewUrlParser: true})
+ .connect(db, {useNewUrlParser: true})
  .then(() => console.log("MongoDB Connected!"))
  .catch(err => console.log(err))
 
