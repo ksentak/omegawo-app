@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap-box {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100vw;
+  height: 90vh;
+  background-image: url("gym.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cta-box {
+  color: white;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border: 4px solid rgb(145, 141, 141);
+  padding: 40px 80px;
+  background-image: url("dplate.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.brand-h1 {
+  font-family: 'Sarpanch', sans-serif;
+  font-size: 6rem;
+  -webkit-text-stroke: .1px rgb(80, 60, 60); 
+  text-shadow: 1px 1px 3px black; 
+  letter-spacing: 12px;
+}
+
+.cta-span {
+  text-align: center;
+  -webkit-text-stroke: .1px rgb(80, 60, 60); 
+  text-shadow: 1px 1px 3px black; 
+  font-size: 1.4rem;
+  font-weight: bold;
+}

@@ -1,12 +1,17 @@
 import React, { Component } from "react"
+import './landingAssets/landing.css';
+
+
 
 class Landing extends Component {
   render () {
-    return (
-      <div className="container">
-          <div className="jumbotron mt-5">
-             <div className="col-sm-8 mx-auto>">Welcome</div>
-          </div>   
+    return ( 
+      
+      <div className="wrap-box">
+        <div className="cta-box">
+          <h1 className="brand-h1">OMEGA</h1>
+          <span className="cta-span">Please Login or Register</span>
+        </div>
       </div>
     )
   }
