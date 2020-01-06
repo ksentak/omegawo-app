@@ -1,5 +1,12 @@
 import React, { Component } from "react"
 
+import Monday from "./days/Monday"
+import Tuesday from "./days/Tuesday"
+import Wednesday from "./days/Wednesday"
+import Thursday from "./days/Thursday"
+import Friday from "./days/Friday"
+import Saturday from "./days/Saturday"
+import Sunday from "./days/Sunday"
 
 
 class WkAtAGlance extends Component {
@@ -16,6 +23,16 @@ class WkAtAGlance extends Component {
         Week At A Glance
         
         </h1>
+
+        <div className="the-days">
+          <Monday />
+          <Tuesday />
+          <Wednesday />
+          <Thursday />
+          <Friday />
+          <Saturday />
+          <Sunday />
+        </div>
       </div>
     )
   }
