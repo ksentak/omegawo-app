@@ -18,6 +18,30 @@ class Workout extends Component {
     e.preventDefault()
     const data = this.state
     console.log(data)
+
+    // const newWO = {
+    //   daySelect: this.state.daySelect,
+    //   workoutWO: this.state.workoutWO,
+    //   workoutReps: this.state.workoutReps,
+    //   workoutSets: this.state.workoutSets
+    // }
+
+    // axios.post('<route>', newWO)
+    // .then(res => console.log(res.data));
+
+    // this.setState({
+    //   daySelect: "Monday",
+    //   workoutWO: "",
+    //   workoutReps: "",
+    //   workoutSets: ""
+    // })
+
+  }
+
+  handleBrowseSubmit = (e) => {
+    e.preventDefault()
+    const be = this.state.browseExercises
+    console.log(be)
   }
 
   handleDSChange = (e) => {
@@ -83,7 +107,7 @@ class Workout extends Component {
           </div>
         </form>
 
-        <form className="search-box">
+        <form className="search-box" onSubmit={this.handleBrowseSubmit}>
         <label>
               Browse Exercises:
               <select className="wo-browser" onChange={this.handleBEChange}>
@@ -97,6 +121,8 @@ class Workout extends Component {
               <option value="Triceps">Triceps</option>
             </select>
             </label>
+
+            <button className="browse-btn" type="submit">Browse Workouts</button>
 
             <div className="search-results">
               
