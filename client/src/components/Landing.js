@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import './landingAssets/landing.css';
+import './styles/landing.css';
 
 
 

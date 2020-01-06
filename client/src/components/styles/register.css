@@ -1,0 +1,31 @@
+body {
+  background-image: url("gym.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box {
+  background-color: rgb(47, 51, 51);
+  margin: 50px 170px 70px 170px;
+  padding-bottom: 50px;
+  border: 3px solid rgb(82, 80, 80);
+}
+
+.h3 {
+  color: white;
+  -webkit-text-stroke: .1px rgb(80, 60, 60); 
+  text-shadow: 1px 1px 3px black; 
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: rgb(47, 51, 51);
+}
+
+.button {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin-top: 25px;
+  border: none;
+  padding: 10px;
+  border: 3px solid rgb(82, 80, 80);
+}

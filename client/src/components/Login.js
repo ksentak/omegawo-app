@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import './styles/main.css';
 import {login} from "./UserFunctions"
 
 class Login extends Component {
@@ -36,11 +37,10 @@ class Login extends Component {
   
   render() {
     return (
-      <div className="container">
-        <div className="row">
+      <div className="login-box">
           <div className="col-md-6 mt-5 mx-auto">
             <form noValidate onSubmit={this.onSubmit}>
-              <h1 className="h3 mb-3 font-weight-normal">Please log in</h1>
+              <h1 className="h3 mb-3 font-weight-normal">Please Log In</h1>
               <div className="form-group">
                 <label htmlFor="email">Email Address</label>
                 <input type="email" 
@@ -61,12 +61,11 @@ class Login extends Component {
                 onChange={this.onChange}
                 />
               </div>
-              <button type="submit" className="btn btn-lg btn-primary btn-block">
+              <button type="submit" className="button btn-block">
                 Sign In
               </button>
             </form>
           </div>
-        </div>
       </div>
     )
   }

@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import {Link, withRouter} from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.css';
 
 class Navbar extends Component {
   logOut(e){
@@ -28,7 +29,7 @@ class Navbar extends Component {
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link to="/profile" className="nav-link">
-            User
+            Dashboard
           </Link>
         </li>
         <li className="nav-item">
