@@ -24,8 +24,10 @@ mongoose
  .catch(err => console.log(err))
 
  var Users = require("./routes/Users")
+ var savedWorkouts = require("./routes/Workouts")
 
  app.use("/users", Users)
+ app.use("/savedWorkouts", savedWorkouts)
 
  if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets

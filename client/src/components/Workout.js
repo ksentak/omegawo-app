@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import {newWorkouts} from "./WorkoutFunctions"
+
 
 
 class Workout extends Component {
@@ -19,29 +21,17 @@ class Workout extends Component {
     const data = this.state
     console.log(data)
 
-    // const newWO = {
-    //   daySelect: this.state.daySelect,
-    //   workoutWO: this.state.workoutWO,
-    //   workoutReps: this.state.workoutReps,
-    //   workoutSets: this.state.workoutSets
-    // }
+    const WO = {
+      daySelect: this.state.daySelect,
+      workoutWO: this.state.workoutWO,
+      workoutReps: this.state.workoutReps,
+      workoutSets: this.state.workoutSets
+    }
 
-    // axios.post('<route>', newWO)
-    // .then(res => console.log(res.data));
+    newWorkouts(WO).then(res => {
+      this.props.history.push("/workout")
+    })
 
-    // this.setState({
-    //   daySelect: "Monday",
-    //   workoutWO: "",
-    //   workoutReps: "",
-    //   workoutSets: ""
-    // })
-
-  }
-
-  handleBrowseSubmit = (e) => {
-    e.preventDefault()
-    const be = this.state.browseExercises
-    console.log(be)
   }
 
   handleDSChange = (e) => {
@@ -67,7 +57,7 @@ class Workout extends Component {
       workoutReps: e.target.value,
     })
   }
-  
+
   handleSetsChange = (e) => {
     this.setState({
       workoutSets: e.target.value,
@@ -81,7 +71,7 @@ class Workout extends Component {
           <div className="inputs1">
             <span className="label">Choose A Day: </span>
             <select className="day-selector" onChange={this.handleDSChange}>
-            <option value="Monday">Monday</option>
+              <option value="Monday">Monday</option>
               <option value="Tuesday">Tuesday</option>
               <option value="Wednesday">Wednesday</option>
               <option value="Thursday">Thursday</option>
@@ -120,7 +110,7 @@ class Workout extends Component {
               <option value="Biceps">Biceps</option>
               <option value="Triceps">Triceps</option>
             </select>
-            </label>
+          </label>
 
             <button className="browse-btn" type="submit">Browse Workouts</button>
 
