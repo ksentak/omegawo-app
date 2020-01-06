@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import {newWorkouts} from "./WorkoutFunctions"
+import Axios from "axios"
 
 
 
@@ -34,6 +35,11 @@ class Workout extends Component {
 
   }
 
+  handleBrowseSubmit = (e) => {
+    e.preventDefault()
+    console.log(this.state.browseExercises)
+  }
+
   handleDSChange = (e) => {
     this.setState({
       daySelect: e.target.value
@@ -43,7 +49,7 @@ class Workout extends Component {
   handleBEChange = (e) => {
     this.setState({
       browseExercises: e.target.value
-    })
+    })    
   }
 
   handleWOChange = (e) => {
@@ -63,6 +69,8 @@ class Workout extends Component {
       workoutSets: e.target.value,
     })
   }
+
+  
   render() {
     return (
 
