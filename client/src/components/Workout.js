@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import {newWorkouts} from "./WorkoutFunctions"
+
 
 
 class Workout extends Component {
@@ -18,6 +20,18 @@ class Workout extends Component {
     e.preventDefault()
     const data = this.state
     console.log(data)
+
+    const WO = {
+      daySelect: this.state.daySelect,
+      workoutWO: this.state.workoutWO,
+      workoutReps: this.state.workoutReps,
+      workoutSets: this.state.workoutSets
+    }
+
+    newWorkouts(WO).then(res => {
+      this.props.history.push("/workout")
+    })
+
   }
 
   handleDSChange = (e) => {
@@ -43,7 +57,7 @@ class Workout extends Component {
       workoutReps: e.target.value,
     })
   }
-  
+
   handleSetsChange = (e) => {
     this.setState({
       workoutSets: e.target.value,
@@ -57,7 +71,7 @@ class Workout extends Component {
           <div className="inputs1">
             <span className="label">Choose A Day: </span>
             <select className="day-selector" onChange={this.handleDSChange}>
-            <option value="Monday">Monday</option>
+              <option value="Monday">Monday</option>
               <option value="Tuesday">Tuesday</option>
               <option value="Wednesday">Wednesday</option>
               <option value="Thursday">Thursday</option>
@@ -84,8 +98,8 @@ class Workout extends Component {
         </form>
 
         <form className="search-box">
-        <label>
-              Browse Exercises:
+          <label>
+            Browse Exercises:
               <select className="wo-browser" onChange={this.handleBEChange}>
               <option value="Chest">Chest</option>
               <option value="Legs">Legs</option>
@@ -96,11 +110,11 @@ class Workout extends Component {
               <option value="Biceps">Biceps</option>
               <option value="Triceps">Triceps</option>
             </select>
-            </label>
+          </label>
 
-            <div className="search-results">
-              
-            </div>
+          <div className="search-results">
+
+          </div>
         </form>
       </div>
     )
