@@ -6,6 +6,7 @@ class CoolDown extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      daySelect: "Monday",
       cooldownWO: "",
       cooldownReps: "",
       cooldownSets: ""
@@ -16,6 +17,12 @@ class CoolDown extends Component {
     e.preventDefault()
     const data = this.state
     console.log(data)
+  }
+
+  handleDSChange = (e) => {
+    this.setState({
+      daySelect: e.target.value
+    })
   }
 
   handleWOChange = (e) => {
@@ -42,14 +49,14 @@ class CoolDown extends Component {
         <form className="form-box" onSubmit={this.handleSubmit}>
           <div className="inputs1">
             <span className="label">Choose A Day: </span>
-            <select className="day-selector">
-              <option value="mon">Monday</option>
-              <option value="tue">Tuesday</option>
-              <option value="wed">Wednesday</option>
-              <option value="thu">Thursday</option>
-              <option value="fri">Friday</option>
-              <option value="sat">Saturday</option>
-              <option value="sun">Sunday</option>
+            <select className="day-selector" onChange={this.handleDSChange}>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
             </select>
           </div>
           <div className="inputs2">

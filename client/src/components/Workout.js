@@ -6,9 +6,11 @@ class Workout extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      daySelect: "Monday",
       workoutWO: "",
       workoutReps: "",
-      workoutSets: ""
+      workoutSets: "",
+      browseExercises: "Chest"
     }
   }
 
@@ -16,6 +18,18 @@ class Workout extends Component {
     e.preventDefault()
     const data = this.state
     console.log(data)
+  }
+
+  handleDSChange = (e) => {
+    this.setState({
+      daySelect: e.target.value
+    })
+  }
+
+  handleBEChange = (e) => {
+    this.setState({
+      browseExercises: e.target.value
+    })
   }
 
   handleWOChange = (e) => {
@@ -42,14 +56,14 @@ class Workout extends Component {
         <form className="form-box" onSubmit={this.handleSubmit}>
           <div className="inputs1">
             <span className="label">Choose A Day: </span>
-            <select className="day-selector">
-              <option value="mon">Monday</option>
-              <option value="tue">Tuesday</option>
-              <option value="wed">Wednesday</option>
-              <option value="thu">Thursday</option>
-              <option value="fri">Friday</option>
-              <option value="sat">Saturday</option>
-              <option value="sun">Sunday</option>
+            <select className="day-selector" onChange={this.handleDSChange}>
+            <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
             </select>
           </div>
           <div className="inputs2">
@@ -67,6 +81,26 @@ class Workout extends Component {
             </label>
             <button className="add-wo-btn" type="submit">Add Workout</button>
           </div>
+        </form>
+
+        <form className="search-box">
+        <label>
+              Browse Exercises:
+              <select className="wo-browser" onChange={this.handleBEChange}>
+              <option value="Chest">Chest</option>
+              <option value="Legs">Legs</option>
+              <option value="Full-body">Full-Body</option>
+              <option value="Back">Back</option>
+              <option value="Shoulders">Shoulders</option>
+              <option value="Core">Core</option>
+              <option value="Biceps">Biceps</option>
+              <option value="Triceps">Triceps</option>
+            </select>
+            </label>
+
+            <div className="search-results">
+              
+            </div>
         </form>
       </div>
     )
