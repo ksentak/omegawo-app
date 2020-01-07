@@ -1,0 +1,271 @@
+[
+{
+  "name" : "Bench Press",
+  "category" : "Chest",
+  "link" : "https://www.youtube.com/watch?v=4aVy2Xj6wYs"
+},
+
+{
+  "name" : "Squats",
+  "category" : "Legs",
+  "link" : "https://www.youtube.com/watch?v=MVMNk0HiTMg"
+},
+
+{
+  "name" : "Burpee",
+  "category" : "Full-body",
+  "link" : "https://www.youtube.com/watch?v=TU8QYVW0gDU"
+},
+
+{
+  "name" : "Lunges",
+  "category" : "Legs",
+  "link" : "https://www.youtube.com/watch?v=COKYKgQ8KR0"
+},
+
+{
+  "name" : "Air Squats",
+  "category" : "Legs",
+  "link" : "https://www.youtube.com/watch?v=rMvwVtlqjTE"
+},
+
+{
+  "name" : "Dumbbell Squeeze Press",
+  "category" : "Chest",
+  "link" : "https://www.youtube.com/watch?v=xt74tbCrTy8"
+},
+
+{
+  "name" : "Stiff-Legged Deadlift",
+  "category" : "Legs",
+  "link" : "https://www.youtube.com/watch?v=R2NQXl0kGmI"
+},
+
+{
+  "name" : "Calf Raises",
+  "category" : "Legs",
+  "link" : "https://www.youtube.com/watch?v=-M4-G8p8fmc"
+},
+
+{
+  "name" : "Decline Bench Press",
+  "category" : "Chest",
+  "link" : "https://www.youtube.com/watch?v=WBmXffkfcXQ"
+},
+
+{
+  "name" : "Chest Dip",
+  "category" : "Chest",
+  "link" : "https://www.youtube.com/watch?v=dX_nSOOJIsE"
+},
+
+{
+  "name" : "Pull-up",
+  "category" : "Back",
+  "link" : "https://www.youtube.com/watch?v=HRV5YKKaeVw"
+},
+
+{
+  "name" : "Box Jumps",
+  "category" : "Legs",
+  "link" : "https://www.youtube.com/watch?v=55TDFcfnqLM"
+},
+
+{
+  "name" : "Close Grip Barbell Press",
+  "category" : "Chest",
+  "link" : "https://www.youtube.com/watch?v=k8dmJBFfAu8"
+},
+
+{
+  "name" : "Kettlebell Swing",
+  "category" : "Full-body",
+  "link" : "https://www.youtube.com/watch?v=vdezTMulJ-k"
+},
+
+{
+  "name" : "Seated Overhead Dumbbell Press",
+  "category" : "Shoulders",
+  "link" : "https://www.youtube.com/watch?v=b5JzUH8gsOg"
+},
+
+{
+  "name" : "Plate Press Out",
+  "category" : "Shoulders",
+  "link" : "https://www.youtube.com/watch?v=rnibfP_evUM"
+},
+
+{
+  "name" : "Deadlifts",
+  "category" : "Full-Body",
+  "link" : "https://www.youtube.com/watch?v=DNJya2CBQJ8"
+},
+
+{
+  "name" : "Lateral Raises",
+  "category" : "Shoulders",
+  "link" : "https://www.youtube.com/watch?v=geenhiHju-o"
+},
+
+{
+  "name" : "Crunches",
+  "category" : "Core",
+  "link" : "https://www.youtube.com/watch?v=MKmrqcoCZ-M"
+},
+
+{
+  "name" : "Dumbbell Shrugs",
+  "category" : "Shoulders",
+  "link" : "https://www.youtube.com/watch?v=cJRVVxmytaM"
+},
+
+{
+  "name" : "Push-up",
+  "category" : "Chest",
+  "link" : "https://www.youtube.com/watch?v=0pkjOk0EiAk"
+},
+
+{
+  "name" : "Plank",
+  "category" : "Core",
+  "link" : "https://www.youtube.com/watch?v=XMxHTNPPgxM"
+},
+
+{
+  "name" : "Rear Delt Fly",
+  "category" : "Shoulders",
+  "link" : "https://www.youtube.com/watch?v=0GSu6Z-Oj7U"
+},
+
+{
+  "name" : "Russian Twist",
+  "category" : "Core",
+  "link" : "https://www.youtube.com/watch?v=wkD8rjkodUI"
+},
+
+{
+  "name" : "Incline Dumbbell Hammer Curl",
+  "category" : "Biceps",
+  "link" : "https://www.youtube.com/watch?v=cbRSu8Ws_hs"
+},
+
+{
+  "name" : "Handstand Push-up",
+  "category" : "Full-body",
+  "link" : "https://www.youtube.com/watch?v=0wDEO6shVjc"
+},
+
+{
+  "name" : "EZ-Bar Curl",
+  "category" : "Biceps",
+  "link" : "https://www.youtube.com/watch?v=kwG2ipFRgfo"
+},
+
+{
+  "name" : "Zottman Curl",
+  "category" : "Biceps",
+  "link" : "https://www.youtube.com/watch?v=ZrpRBgswtHs"
+},
+
+{
+  "name" : "Box Jumps",
+  "category" : "Legs",
+  "link" : "https://www.youtube.com/watch?v=52r_Ul5k03g"
+},
+
+{
+  "name" : "Dumbbell Side Bend",
+  "category" : "Core",
+  "link" : "https://www.youtube.com/watch?v=dL9ZzqtQI5c"
+},
+
+{
+  "name" : "Sit-ups",
+  "category" : "Core",
+  "link" : "https://www.youtube.com/watch?v=_HPfXutjB1s"
+},
+
+{
+  "name" : "Dumbbell Bicep Curl",
+  "category" : "Biceps",
+  "link" : "https://www.youtube.com/watch?v=ykJmrZ5v0Oo"
+},
+
+{
+  "name" : "Lat Pulldown",
+  "category" : "Back",
+  "link" : "https://www.youtube.com/watch?v=u3gQT2aMVaI"
+},
+
+{
+  "name" : "Wide Grip Standing Barbell Curl",
+  "category" : "Biceps",
+  "link" : "https://www.youtube.com/watch?v=x0s-hL3CuKg"
+},
+
+{
+  "name" : "Barbell Row",
+  "category" : "Back",
+  "link" : "https://www.youtube.com/watch?v=B1T6ZYrPAy4"
+},
+
+{
+  "name" : "Dumbbell Row",
+  "category" : "Back",
+  "link" : "https://www.youtube.com/watch?v=-koP10y1qZI"
+},
+
+{
+  "name" : "Close Grip Push-ups",
+  "category" : "Triceps",
+  "link" : "https://www.youtube.com/watch?v=NPmRYbIneTE"
+},
+
+{
+  "name" : "Seated Reverse Fly",
+  "category" : "Back",
+  "link" : "https://www.youtube.com/watch?v=9R5f4oIjwq8"
+},
+
+{
+  "name" : "Tricep Push-down",
+  "category" : "Triceps",
+  "link" : "https://www.youtube.com/watch?v=8WL0m0vLAPo"
+},
+
+{
+  "name" : "Tricep Kickbacks",
+  "category" : "Triceps",
+  "link" : "https://www.youtube.com/watch?v=ZO81bExngMI"
+},
+
+{
+  "name" : "Dumbbell Tricep Extension",
+  "category" : "Triceps",
+  "link" : "https://www.youtube.com/watch?v=_gsUck-7M74"
+},
+
+{
+  "name" : "Close Grip Bench Press",
+  "category" : "Triceps",
+  "link" : "https://www.youtube.com/watch?v=nEF0bv2FW94"
+},
+
+{
+  "name" : "Barbell Tricep Extension",
+  "category" : "Triceps",
+  "link" : "https://www.youtube.com/watch?v=LVqdtjlzJWQ"
+},
+
+{
+  "name" : "Barbell Incline Bench Press",
+  "category" : "Chest",
+  "link" : "https://www.youtube.com/watch?v=DbFgADa2PL8"
+},
+
+{
+  "name" : "Cable Crossovers",
+  "category" : "Chest",
+  "link" : "https://www.youtube.com/watch?v=taI4XduLpTk"
+}
+]
