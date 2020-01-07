@@ -1,7 +1,5 @@
 import React, { Component } from "react"
 import {newWorkouts} from "./WorkoutFunctions"
-import Axios from "axios"
-
 
 
 class Workout extends Component {

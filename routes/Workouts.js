@@ -21,4 +21,17 @@ savedWorkouts.post("/workout", (req, res) => {
 	})
 });
 
+savedWorkouts.get("/workout", (req, res) => {
+	Workout.find({})
+	// .then(res => res.data);
+		.then(workout => {
+			if (workout) {
+				res.json(workout)
+			} 
+			else {
+				res.send("Workout does not exist")
+			}
+		})
+})
+
 module.exports = savedWorkouts;
