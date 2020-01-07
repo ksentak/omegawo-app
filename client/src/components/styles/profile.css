@@ -152,6 +152,14 @@ body {
   color: white;
 }
 
+#sr, #sb {
+  display: none;
+}
+
+#sr {
+  margin-top: 20px;
+}
+
 .wo-browser {
   margin-left: 15px;
 }
@@ -160,7 +168,23 @@ body {
   margin-left: 15px;
 }
 
+.bold_name {
+  font-weight: bold;
+  margin-right: 10px;
+}
 
+.category {
+  margin-right: 20px;
+}
+
+.addtoplan {
+  float: right;
+  padding: 2px;
+}
+
+#collapse {
+  display: none;
+}
 
 
 

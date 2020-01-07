@@ -1,17 +1,19 @@
 import React, { Component } from "react"
 import {newWorkouts} from "./WorkoutFunctions"
-
+import searchResults from "./workouts.json"
+import ExerciseList from "./ExerciseList"
 
 class Workout extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
+      searchResults,
       daySelect: "Monday",
       workoutWO: "",
       workoutReps: "",
       workoutSets: "",
-      browseExercises: "Chest"
+      browseExercises: "Chest",
     }
   }
 
@@ -68,7 +70,21 @@ class Workout extends Component {
     })
   }
 
-  
+
+
+  showDivs = () => {
+    document.getElementById("sr").style.display = "block";
+    document.getElementById("sb").style.display = "block";
+    document.getElementById("collapse").style.display = "inline";
+  }
+
+  hideDivs = () => {
+    document.getElementById("sr").style.display = "none";
+    document.getElementById("sb").style.display = "none";
+    document.getElementById("collapse").style.display = "none";
+  }
+
+
   render() {
     return (
 
@@ -99,31 +115,13 @@ class Workout extends Component {
               Sets:
           <input type="text" name="warmupSets" className="wu-num" onChange={this.handleSetsChange} />
             </label>
-            <button className="add-wo-btn" type="submit">Add Workout</button>
+            <button className="add-wo-btn" type="submit">Add Workout</button> 
+            <button className="browse-toggle" onClick={this.showDivs}>Browse Exercises</button>
+            <button id="collapse" onClick={this.hideDivs}>Collapse Exercises</button>
           </div>
         </form>
 
-        <form className="search-box" onSubmit={this.handleBrowseSubmit}>
-        <label>
-              Browse Exercises:
-              <select className="wo-browser" onChange={this.handleBEChange}>
-              <option value="Chest">Chest</option>
-              <option value="Legs">Legs</option>
-              <option value="Full-body">Full-Body</option>
-              <option value="Back">Back</option>
-              <option value="Shoulders">Shoulders</option>
-              <option value="Core">Core</option>
-              <option value="Biceps">Biceps</option>
-              <option value="Triceps">Triceps</option>
-            </select>
-          </label>
-
-            <button className="browse-btn" type="submit">Browse Workouts</button>
-
-            <div className="search-results">
-              
-            </div>
-        </form>
+        <ExerciseList />
       </div>
     )
   }
