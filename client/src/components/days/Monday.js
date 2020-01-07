@@ -9,10 +9,25 @@ class Monday extends Component {
 
 	componentDidMount() {
 		API.getAllWorkouts()
-      .then(savedWorkouts => this.setState({ savedWorkouts: savedWorkouts }))
-      .catch(err => console.error(err));
+      .then(res => {
+        console.log(res)
+        var monday = []
+        for (var i = 0; i<res.length; i++) {
+          console.log(res[i].daySelect);
+          if (res[i].daySelect === "Monday"){
+            monday.push(res[i].workoutWO)
+            monday.push(res[i].workoutSets)
+            monday.push(res[i].workoutReps)
+
+          }
+
+        }
+        console.log("Monday: " + monday)
+        this.setState({ savedWorkouts: monday})
+       
+      })
   }
-  
+    
   render () {
     return ( 
       
@@ -57,7 +72,7 @@ class Monday extends Component {
 
               {this.state.savedWorkouts.map(item =>
               <div>
-                <h6>{item.workoutWO}</h6>
+                <span>{item}</span>
               </div>
               )}
     
