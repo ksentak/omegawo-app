@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import {newWorkouts} from "./WorkoutFunctions"
 import searchResults from "./workouts.json"
-import ExerciseList from "./ExerciseList"
 
 class Workout extends Component {
 
@@ -84,6 +83,12 @@ class Workout extends Component {
     document.getElementById("collapse").style.display = "none";
   }
 
+  passTheWO = (i) => {
+    console.log(searchResults[i].name)
+    this.setState({
+      workoutWO: searchResults[i].name
+    })
+  }
 
   render() {
     return (
@@ -105,7 +110,7 @@ class Workout extends Component {
           <div className="inputs2">
             <label>
               Workout:
-          <input type="text" name="warmupWO" className="wu-input" onChange={this.handleWOChange} />
+          <input type="text" id="WO" value={this.state.workoutWO} name="warmupWO" className="wu-input" onChange={this.handleWOChange} />
             </label>
             <label>
               Reps:
@@ -116,12 +121,43 @@ class Workout extends Component {
           <input type="text" name="warmupSets" className="wu-num" onChange={this.handleSetsChange} />
             </label>
             <button className="add-wo-btn" type="submit">Add Workout</button> 
-            <button className="browse-toggle" onClick={this.showDivs}>Browse Exercises</button>
-            <button id="collapse" onClick={this.hideDivs}>Collapse Exercises</button>
+            
           </div>
         </form>
+              <button className="browse-toggle" onClick={this.showDivs}>Browse Exercises</button>
+              <button id="collapse" onClick={this.hideDivs}>Collapse Exercises</button>
+              <form className="search-box" id="sb" onSubmit={this.handleBrowseSubmit}>
+        <label>
+          Browse Exercises:
+            <select className="wo-browser" onChange={this.handleBEChange}>
+            <option value="Chest">Chest</option>
+            <option value="Legs">Legs</option>
+            <option value="Full-body">Full-Body</option>
+            <option value="Back">Back</option>
+            <option value="Shoulders">Shoulders</option>
+            <option value="Core">Core</option>
+            <option value="Biceps">Biceps</option>
+            <option value="Triceps">Triceps</option>
+          </select>
+        </label>
 
-        <ExerciseList />
+        <button className="browse-btn" id="fw">Filter Workouts</button>
+        <button className="browse-btn" id="saw">All Workouts</button>
+
+        <div className="search-results" id="sr">
+          {this.state.searchResults.map((item, i) => (
+            <div>
+              <div className="bold_name">{item.name}</div>
+              <span className="category">Category: {item.category}</span>
+              <span className="link"><a href={item.link} target="_blank">Youtube Example</a></span>
+              <button className="addtoplan"  onClick={() => this.passTheWO(i)}>Add To Plan</button>
+              <hr />
+            </div>
+
+          ))}
+        </div>
+
+      </form>
       </div>
     )
   }
