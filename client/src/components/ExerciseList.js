@@ -28,7 +28,7 @@ class ExerciseList extends Component {
 
   passTheWO = () => {
     this.setState({
-      workoutWO: 
+      workoutWO: ""
     })
   }
 
