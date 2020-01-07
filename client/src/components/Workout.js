@@ -70,8 +70,6 @@ class Workout extends Component {
     })
   }
 
-
-
   showDivs = () => {
     document.getElementById("sr").style.display = "block";
     document.getElementById("sb").style.display = "block";
@@ -83,7 +81,6 @@ class Workout extends Component {
     document.getElementById("sb").style.display = "none";
     document.getElementById("collapse").style.display = "none";
   }
-
 
   render() {
     return (
