@@ -1,8 +1,31 @@
 import React, { Component } from "react"
-
-
+import API from "../../utils/API";
 
 class Thursday extends Component {
+
+  state = {
+    savedWorkouts: [],
+	}
+
+	componentDidMount() {
+		API.getAllWorkouts()
+      .then(res => {
+        console.log(res)
+        var thursday = []
+        for (var i = 0; i<res.length; i++) {
+          console.log(res[i].daySelect);
+          if (res[i].daySelect === "Thursday"){
+            thursday.push(res[i].workoutWO)
+            thursday.push(res[i].workoutSets)
+            thursday.push(res[i].workoutReps)
+          }
+
+        }
+        console.log("Thursday: " + thursday)
+        this.setState({ savedWorkouts: thursday})
+      })
+  }
+  
   render () {
     return ( 
       
@@ -43,7 +66,14 @@ class Thursday extends Component {
               
             </h5>
             <div className="wo-contents">
+              {console.log(this.state.savedWorkouts)}
 
+              {this.state.savedWorkouts.map(item =>
+              <div>
+                <h6>{item}</h6>
+              </div>
+              )}
+    
             </div>
           </div>
           <div className="cd-day-plan">
@@ -68,4 +98,4 @@ class Thursday extends Component {
   }
 }
 
-export default Thursday
+export default Thursday;

@@ -69,8 +69,6 @@ class Workout extends Component {
     })
   }
 
-
-
   showDivs = () => {
     document.getElementById("sr").style.display = "block";
     document.getElementById("sb").style.display = "block";

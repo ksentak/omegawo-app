@@ -34,4 +34,18 @@ savedWorkouts.get("/workout", (req, res) => {
 		})
 })
 
+
+// savedWorkouts.get("/workout", (req, res) => {
+// 	Workout.find().sort({daySelect: Monday})
+// 	// .then(res => res.data);
+// 		.then(workout => {
+// 			if (workout) {
+// 				res.json(workout)
+// 			} 
+// 			else {
+// 				res.send("Workout does not exist")
+// 			}
+// 		})
+// })
+
 module.exports = savedWorkouts;

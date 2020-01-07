@@ -5,9 +5,6 @@ import Tuesday from "./days/Tuesday"
 import Wednesday from "./days/Wednesday"
 import Thursday from "./days/Thursday"
 import Friday from "./days/Friday"
-import Saturday from "./days/Saturday"
-import Sunday from "./days/Sunday"
-
 
 class WkAtAGlance extends Component {
   render () {
@@ -30,8 +27,6 @@ class WkAtAGlance extends Component {
           <Wednesday />
           <Thursday />
           <Friday />
-          <Saturday />
-          <Sunday />
         </div>
       </div>
     )
