@@ -191,6 +191,19 @@ body {
   margin-right: 25px;
 }
 
+.waag-wo-box {
+  color: white;
+  margin-left: 50px;
+}
+
+.waag-wo {
+  display: inline;
+}
+
+.wo-contents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
 
 
