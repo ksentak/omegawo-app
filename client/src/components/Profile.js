@@ -4,10 +4,11 @@ import jwt_decode from "jwt-decode"
 import {Link, withRouter} from "react-router-dom"
 
 class Profile extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      first_name: ""
+      first_name: "",
+      id: ""
     }
   }
 
@@ -16,7 +17,8 @@ class Profile extends Component {
     const decoded = jwt_decode(token)
 
     this.setState({
-      first_name: decoded.first_name
+      first_name: decoded.first_name,
+      id: decoded._id
     });
     
   }

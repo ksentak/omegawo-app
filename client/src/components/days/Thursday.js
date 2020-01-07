@@ -41,7 +41,7 @@ class Thursday extends Component {
         </h1>
 
         <div className="day-plan-box">
-          <div className="wu-day-plan">
+          {/* <div className="wu-day-plan">
             <h5 style={{
               color: "white",
               textAlign: "center",
@@ -54,7 +54,7 @@ class Thursday extends Component {
             <div className="wu-contents">
 
             </div>
-          </div>
+          </div> */}
           <div className="wo-day-plan">
             <h5 style={{
               color: "white",
@@ -69,14 +69,14 @@ class Thursday extends Component {
               {console.log(this.state.savedWorkouts)}
 
               {this.state.savedWorkouts.map(item =>
-              <div>
-                <h6>{item}</h6>
-              </div>
+               <div className="waag-wo-box">
+                 <span className="waag-wo">{item}</span>
+               </div>
               )}
     
             </div>
           </div>
-          <div className="cd-day-plan">
+          {/* <div className="cd-day-plan">
             <h5 style={{
               color: "white",
               textAlign: "center",
@@ -89,7 +89,7 @@ class Thursday extends Component {
             <div className="cd-contents">
 
             </div>
-          </div>
+          </div> */}
 
 
         </div>
