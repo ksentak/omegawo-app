@@ -1,9 +1,7 @@
 import React, { Component } from "react"
 import {newWorkouts} from "./WorkoutFunctions"
-// import Axios from "axios"
 import searchResults from "./workouts.json"
 import ExerciseList from "./ExerciseList"
-
 
 class Workout extends Component {
 

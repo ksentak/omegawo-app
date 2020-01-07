@@ -1,8 +1,18 @@
 import React, { Component } from "react"
-
-
+import API from "../../utils/API";
 
 class Monday extends Component {
+
+  state = {
+    savedWorkouts: [],
+	}
+
+	componentDidMount() {
+		API.getAllWorkouts()
+      .then(savedWorkouts => this.setState({ savedWorkouts: savedWorkouts }))
+      .catch(err => console.error(err));
+  }
+  
   render () {
     return ( 
       
@@ -43,7 +53,14 @@ class Monday extends Component {
               
             </h5>
             <div className="wo-contents">
+              {console.log(this.state.savedWorkouts)}
 
+              {this.state.savedWorkouts.map(item =>
+              <div>
+                <h6>{item.workoutWO}</h6>
+              </div>
+              )}
+    
             </div>
           </div>
           <div className="cd-day-plan">
