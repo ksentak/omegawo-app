@@ -46,6 +46,7 @@ class Workout extends Component {
       this.props.history.push("/workout")
     })
 
+    window.location.reload(false);
   }
 
   handleBrowseSubmit = (e) => {
