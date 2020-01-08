@@ -24,9 +24,46 @@ class Tuesday extends Component {
         for (var i = 0; i < res.length; i++) {
           console.log(res[i].daySelect);
           if (res[i].daySelect === "Tuesday" && res[i].userId === this.state.userId){
-            tuesday.push(res[i].workoutWO)
-            tuesday.push(res[i].workoutSets)
-            tuesday.push(res[i].workoutReps)
+            tuesday.push({
+              workoutWO: res[i].workoutWO,
+              workoutSets: res[i].workoutSets,
+              workoutReps: res[i].workoutReps,
+              _id: res[i]._id
+            })
+          }
+
+        }
+        console.log("Tuesday: " + tuesday)
+        this.setState({ savedWorkouts: tuesday})
+       
+      })
+  }
+
+  clearRow = (id) => {
+    // document.getElementById("wo-row").innerHTML = "";
+    API.deleteWorkouts(id);
+    console.log(id);
+
+    const token = localStorage.usertoken
+    const decoded = jwt_decode(token)
+
+    this.setState({
+      userId: decoded._id
+    });
+
+		API.getAllWorkouts()
+      .then(res => {
+        console.log(res)
+        var tuesday = []
+        for (var i = 0; i < res.length; i++) {
+          console.log(res[i].daySelect);
+          if (res[i].daySelect === "Tuesday" && res[i].userId === this.state.userId){
+            tuesday.push({
+              workoutWO: res[i].workoutWO,
+              workoutSets: res[i].workoutSets,
+              workoutReps: res[i].workoutReps,
+              _id: res[i]._id
+            })
           }
 
         }
@@ -87,9 +124,18 @@ class Tuesday extends Component {
               {console.log(this.state.savedWorkouts)}
 
               {this.state.savedWorkouts.map(item =>
-              <div className="waag-wo-box">
-                <span className="waag-wo">{item}</span>
-              </div>
+                   <div className="wo-row">
+                   <div className="waag-wo-box">
+                     <span className="waag-wo">{item.workoutWO}</span>
+                   </div>
+                   <div className="waag-wo-box">
+                     <span className="waag-wo">{item.workoutReps}</span>
+                   </div>
+                   <div className="waag-wo-box">
+                     <span className="waag-wo">{item.workoutSets}</span>
+                   </div>
+                   <button data-id={item._id} onClick={() => this.clearRow(item._id)}>Remove</button>
+                 </div>
               )}
     
             </div>

@@ -35,6 +35,14 @@ savedWorkouts.get("/workout", (req, res) => {
 		})
 })
 
+savedWorkouts.delete("/workout/:id", (req, res) => {
+
+	Workout.deleteOne({ _id: req.params.id })
+		// .then(savedWorkouts => savedWorkouts.remove())
+		.then(savedWorkouts => res.json(savedWorkouts))
+		.catch(err => res.json(err));
+	});
+
 
 // savedWorkouts.get("/workout", (req, res) => {
 // 	Workout.find().sort({daySelect: Monday})
