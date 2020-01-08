@@ -222,6 +222,15 @@ body {
   margin-top: 20px;
 }
 
+.st {
+  text-decoration: line-through;
+}
+
+#wu-link, #cd-link {
+  background-color: #2f3333;
+  border: 1px solid #2f3333;
+}
+
 
 
 
