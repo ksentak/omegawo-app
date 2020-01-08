@@ -13,7 +13,8 @@ savedWorkouts.post("/workout", (req, res) => {
 	  daySelect: req.body.daySelect,
 	  workoutWO: req.body.workoutWO,
 	  workoutReps: req.body.workoutReps,
-	  workoutSets: req.body.workoutSets
+	  workoutSets: req.body.workoutSets,
+	  userId: req.body.userId
 	})
 	workoutData.save((err, savedWorkouts) => {
 		if (err) return res.json(err);

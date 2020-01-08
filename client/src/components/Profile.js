@@ -8,7 +8,7 @@ class Profile extends Component {
     super(props)
     this.state = {
       first_name: "",
-      id: ""
+      _id: ""
     }
   }
 
@@ -18,7 +18,7 @@ class Profile extends Component {
 
     this.setState({
       first_name: decoded.first_name,
-      id: decoded._id
+      _id: decoded._id
     });
     
   }

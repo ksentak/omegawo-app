@@ -6,7 +6,8 @@ export const newWorkouts = newWorkout => {
       daySelect: newWorkout.daySelect,
       workoutWO: newWorkout.workoutWO,
       workoutReps: newWorkout.workoutReps,
-      workoutSets: newWorkout.workoutSets
+      workoutSets: newWorkout.workoutSets,
+      userId: newWorkout.userId
     })
     .then(res => {
       console.log("Sent!")

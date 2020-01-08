@@ -16,10 +16,12 @@ app.use(
 )
 
 // DB Config
-const db = require("./config/keys").mongoURI;
+// const db = require("./config/keys").mongoURI;
+
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/omega-wo";
 
 mongoose
- .connect(db, {useNewUrlParser: true})
+ .connect(MONGODB_URI, {useNewUrlParser: true})
  .then(() => console.log("MongoDB Connected!"))
  .catch(err => console.log(err))
 
