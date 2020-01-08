@@ -194,24 +194,32 @@ body {
 .waag-wo-box {
   color: white;
   margin-left: 50px;
+
 }
 
 .waag-wo {
   display: inline;
+  text-align: center;
 }
 
-.wo-contents {
+.wo-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr .5fr .5fr .5fr;
+  align-items: center;
 }
 
 .wo-header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr .5fr .5fr .5fr;
   color: white;
   font-size: 18px;
   text-decoration: underline;
   text-align: center;
+}
+
+.remove-wo {
+  margin-left: 30px;
+  margin-top: 20px;
 }
 
 
