@@ -13,6 +13,9 @@ const workoutSchema = new Schema({
 	},
 	workoutSets: {
 		type: String
+	},
+	userId: {
+		type: String
 	}
 });
 

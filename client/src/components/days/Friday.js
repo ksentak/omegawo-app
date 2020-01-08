@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import API from "../../utils/API";
+import jwt_decode from "jwt-decode"
 
 class Friday extends Component {
 
@@ -8,13 +9,21 @@ class Friday extends Component {
 	}
 
 	componentDidMount() {
+
+    const token = localStorage.usertoken
+    const decoded = jwt_decode(token)
+
+    this.setState({
+      userId: decoded._id
+    });
+
 		API.getAllWorkouts()
       .then(res => {
         console.log(res)
         var friday = []
-        for (var i = 0; i<res.length; i++) {
+        for (var i = 0; i < res.length; i++) {
           console.log(res[i].daySelect);
-          if (res[i].daySelect === "Friday"){
+          if (res[i].daySelect === "Friday" && res[i].userId === this.state.userId){
             friday.push(res[i].workoutWO)
             friday.push(res[i].workoutSets)
             friday.push(res[i].workoutReps)
@@ -23,9 +32,10 @@ class Friday extends Component {
         }
         console.log("Friday: " + friday)
         this.setState({ savedWorkouts: friday})
+       
       })
   }
-  
+    
   render () {
     return ( 
       
@@ -77,9 +87,9 @@ class Friday extends Component {
               {console.log(this.state.savedWorkouts)}
 
               {this.state.savedWorkouts.map(item =>
-               <div className="waag-wo-box">
-                 <span className="waag-wo">{item}</span>
-               </div>
+              <div className="waag-wo-box">
+                <span className="waag-wo">{item}</span>
+              </div>
               )}
     
             </div>

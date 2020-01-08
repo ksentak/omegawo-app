@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import {newWorkouts} from "./WorkoutFunctions"
 import searchResults from "./workouts.json"
+import jwt_decode from "jwt-decode"
+
 
 class Workout extends Component {
 
@@ -13,7 +15,18 @@ class Workout extends Component {
       workoutReps: "",
       workoutSets: "",
       browseExercises: "Chest",
+      // userId: ""
     }
+  }
+
+  componentDidMount () {
+    const token = localStorage.usertoken
+    const decoded = jwt_decode(token)
+
+    this.setState({
+      userId: decoded._id
+    });
+
   }
 
   handleSubmit = (e) => {
@@ -25,7 +38,8 @@ class Workout extends Component {
       daySelect: this.state.daySelect,
       workoutWO: this.state.workoutWO,
       workoutReps: this.state.workoutReps,
-      workoutSets: this.state.workoutSets
+      workoutSets: this.state.workoutSets,
+      userId: this.state.userId
     }
 
     newWorkouts(WO).then(res => {
