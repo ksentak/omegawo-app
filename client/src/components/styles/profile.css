@@ -205,6 +205,14 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.wo-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+  font-size: 18px;
+  text-decoration: underline;
+  text-align: center;
+}
 
 
 

@@ -42,7 +42,7 @@ class Profile extends Component {
             </span>
           </div>
               <span className="op-box-item-row-2 op-box">
-               <Link to="/browse" style={{ textDecoration: 'none', color: "white" }}>Browse Exercises</Link>
+               <Link to="/browse" style={{ textDecoration: 'none', color: "white" }}>Exercise Basics</Link>
               </span>
         </div>
       </div>

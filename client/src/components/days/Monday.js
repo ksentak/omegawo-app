@@ -76,6 +76,13 @@ class Monday extends Component {
               Workouts
               
             </h5>
+
+            <div className="wo-header">
+              <span className="wo-header-span">Type</span>
+              <span className="wo-header-span">Reps</span>
+              <span className="wo-header-span">Sets</span>
+            </div>
+
             <div className="wo-contents">
               {console.log(this.state.savedWorkouts)}
 

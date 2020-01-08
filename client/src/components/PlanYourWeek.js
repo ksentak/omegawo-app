@@ -20,9 +20,9 @@ class PlanYourWeek extends Component {
         </h1>
 
         <div className="button-box">
-          <button className="pyw-button"><Link to="/warmup" style={{ textDecoration: "none", color: "white"}}>Warmup</Link></button>
+          <button id="wu-link" className="pyw-button"></button>
           <button className="pyw-button"><Link to="/workout" style={{ textDecoration: "none", color: "white"}}>Workout</Link></button>
-          <button className="pyw-button"><Link to="/cooldown" style={{ textDecoration: "none", color: "white"}}>Cool Down</Link></button>
+          <button id="cd-link" className="pyw-button"></button>
         </div>
 
         <div className="wo-box">
