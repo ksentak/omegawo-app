@@ -44,9 +44,12 @@ class Workout extends Component {
 
     newWorkouts(WO).then(res => {
       this.props.history.push("/workout")
+      this.setState({
+        workoutWO: "",
+        workoutReps: "",
+        workoutSets: ""
+      })
     })
-
-    window.location.reload(false);
   }
 
   handleBrowseSubmit = (e) => {
@@ -119,11 +122,11 @@ class Workout extends Component {
             </label>
             <label>
               Reps:
-          <input type="text" name="warmupReps" className="wu-num" onChange={this.handleRepChange} />
+          <input type="text" name="warmupReps" value={this.state.workoutReps} className="wu-num" onChange={this.handleRepChange} />
             </label>
             <label>
               Sets:
-          <input type="text" name="warmupSets" className="wu-num" onChange={this.handleSetsChange} />
+          <input type="text" name="warmupSets" value={this.state.workoutSets} className="wu-num" onChange={this.handleSetsChange} />
             </label>
             <button className="add-wo-btn" type="submit">Add Workout</button> 
             
