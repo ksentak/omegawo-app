@@ -45,12 +45,6 @@ class Workout extends Component {
     })
   }
 
-  handleBEChange = (e) => {
-    this.setState({
-      browseExercises: e.target.value
-    })    
-  }
-
   handleWOChange = (e) => {
     this.setState({
       workoutWO: e.target.value,
@@ -101,8 +95,6 @@ class Workout extends Component {
               <option value="Wednesday">Wednesday</option>
               <option value="Thursday">Thursday</option>
               <option value="Friday">Friday</option>
-              <option value="Saturday">Saturday</option>
-              <option value="Sunday">Sunday</option>
             </select>
           </div>
           <div className="inputs2">
@@ -127,20 +119,7 @@ class Workout extends Component {
               <form className="search-box" id="sb" onSubmit={this.handleBrowseSubmit}>
         <label>
           Browse Exercises:
-            <select className="wo-browser" onChange={this.handleBEChange}>
-            <option value="Chest">Chest</option>
-            <option value="Legs">Legs</option>
-            <option value="Full-body">Full-Body</option>
-            <option value="Back">Back</option>
-            <option value="Shoulders">Shoulders</option>
-            <option value="Core">Core</option>
-            <option value="Biceps">Biceps</option>
-            <option value="Triceps">Triceps</option>
-          </select>
         </label>
-
-        <button className="browse-btn" id="fw">Filter Workouts</button>
-        <button className="browse-btn" id="saw">All Workouts</button>
 
         <div className="search-results" id="sr">
           {this.state.searchResults.map((item, i) => (
