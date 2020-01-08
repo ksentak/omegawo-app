@@ -1,13 +1,13 @@
-import React, {Component} from "react"
-import {Link, withRouter} from "react-router-dom"
+import React, { Component } from "react";
+import { Link, withRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 
 class Navbar extends Component {
-  logOut(e){
+  logOut(e) {
     e.preventDefault()
     localStorage.removeItem("usertoken")
     this.props.history.push("/")
-  }
+  };
 
   render() {
     const loginRegLink = (
@@ -40,7 +40,7 @@ class Navbar extends Component {
       </ul>
     )
 
-    return(
+    return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark rounded">
         <button className="navbar-toggler"
           type="button"
@@ -63,8 +63,8 @@ class Navbar extends Component {
           {localStorage.usertoken ? userLink : loginRegLink}
         </div>
       </nav>
-    )
-  }
-}
+    );
+  };
+};
 
-export default withRouter(Navbar)
+export default withRouter(Navbar);

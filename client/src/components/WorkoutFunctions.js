@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "axios";
 
 export const newWorkouts = newWorkout => {
   return axios 
@@ -11,5 +11,5 @@ export const newWorkouts = newWorkout => {
     })
     .then(res => {
       console.log("Sent!")
-    })
-}
+    });
+};

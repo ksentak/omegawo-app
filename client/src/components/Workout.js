@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import {newWorkouts} from "./WorkoutFunctions"
-import searchResults from "./workouts.json"
-import jwt_decode from "jwt-decode"
+import React, { Component } from "react";
+import { newWorkouts } from "./WorkoutFunctions";
+import searchResults from "./workouts.json";
+import jwt_decode from "jwt-decode";
 
 
 class Workout extends Component {
@@ -15,24 +15,22 @@ class Workout extends Component {
       workoutReps: "",
       workoutSets: "",
       browseExercises: "Chest",
-      // userId: ""
-    }
-  }
+    };
+  };
 
-  componentDidMount () {
+  componentDidMount() {
     const token = localStorage.usertoken
     const decoded = jwt_decode(token)
 
     this.setState({
       userId: decoded._id
     });
-
-  }
+  };
 
   handleSubmit = (e) => {
-    e.preventDefault()
-    const data = this.state
-    console.log(data)
+    e.preventDefault();
+    const data = this.state;
+    console.log(data);
 
     const WO = {
       daySelect: this.state.daySelect,
@@ -40,69 +38,68 @@ class Workout extends Component {
       workoutReps: this.state.workoutReps,
       workoutSets: this.state.workoutSets,
       userId: this.state.userId
-    }
+    };
 
     newWorkouts(WO).then(res => {
-      this.props.history.push("/workout")
+      this.props.history.push("/workout");
       this.setState({
         workoutWO: "",
         workoutReps: "",
         workoutSets: ""
-      })
-    })
-  }
+      });
+    });
+  };
 
   handleBrowseSubmit = (e) => {
     e.preventDefault()
     console.log(this.state.browseExercises)
-  }
+  };
 
   handleDSChange = (e) => {
     this.setState({
       daySelect: e.target.value
-    })
-  }
+    });
+  };
 
   handleWOChange = (e) => {
     this.setState({
       workoutWO: e.target.value,
-    })
-  }
+    });
+  };
 
   handleRepChange = (e) => {
     this.setState({
       workoutReps: e.target.value,
-    })
-  }
+    });
+  };
 
   handleSetsChange = (e) => {
     this.setState({
       workoutSets: e.target.value,
-    })
-  }
+    });
+  };
 
   showDivs = () => {
     document.getElementById("sr").style.display = "block";
     document.getElementById("sb").style.display = "block";
     document.getElementById("collapse").style.display = "inline";
-  }
+  };
 
   hideDivs = () => {
     document.getElementById("sr").style.display = "none";
     document.getElementById("sb").style.display = "none";
     document.getElementById("collapse").style.display = "none";
-  }
+  };
 
   passTheWO = (i) => {
     console.log(searchResults[i].name)
     this.setState({
       workoutWO: searchResults[i].name
-    })
-  }
+    });
+  };
 
   render() {
     return (
-
       <div>
         <form className="form-box" onSubmit={this.handleSubmit}>
           <div className="inputs1">
@@ -128,34 +125,32 @@ class Workout extends Component {
               Sets:
           <input type="text" name="warmupSets" value={this.state.workoutSets} className="wu-num" onChange={this.handleSetsChange} />
             </label>
-            <button className="add-wo-btn" type="submit">Add Workout</button> 
-            
+            <button className="add-wo-btn" type="submit">Add Workout</button>
           </div>
         </form>
-              <button className="browse-toggle" onClick={this.showDivs}>Browse Exercises</button>
-              <button id="collapse" onClick={this.hideDivs}>Collapse Exercises</button>
-              <form className="search-box" id="sb" onSubmit={this.handleBrowseSubmit}>
-        <label>
-          Browse Exercises:
+        <button className="browse-toggle" onClick={this.showDivs}>Browse Exercises</button>
+        <button id="collapse" onClick={this.hideDivs}>Collapse Exercises</button>
+        <form className="search-box" id="sb" onSubmit={this.handleBrowseSubmit}>
+          <label>
+            Browse Exercises:
         </label>
 
-        <div className="search-results" id="sr">
-          {this.state.searchResults.map((item, i) => (
-            <div>
-              <div className="bold_name">{item.name}</div>
-              <span className="category">Category: {item.category}</span>
-              <span className="link"><a href={item.link} target="_blank">Youtube Example</a></span>
-              <button className="addtoplan"  onClick={() => this.passTheWO(i)}>Add To Plan</button>
-              <hr />
-            </div>
+          <div className="search-results" id="sr">
+            {this.state.searchResults.map((item, i) => (
+              <div>
+                <div className="bold_name">{item.name}</div>
+                <span className="category">Category: {item.category}</span>
+                <span className="link"><a href={item.link} target="_blank">Youtube Example</a></span>
+                <button className="addtoplan" onClick={() => this.passTheWO(i)}>Add To Plan</button>
+                <hr />
+              </div>
+            ))}
+          </div>
 
-          ))}
-        </div>
-
-      </form>
+        </form>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 export default Workout
