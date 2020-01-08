@@ -1,13 +1,13 @@
-const express = require("express")
-const users = express.Router()
-const cors = require("cors")
-const jwt = require("jsonwebtoken")
-const bcrypt = require("bcryptjs")
+const express = require("express");
+const users = express.Router();
+const cors = require("cors");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
-const User = require("../models/User")
-users.use(cors())
+const User = require("../models/User");
+users.use(cors());
 
-process.env.SECRET_KEY = "secret"
+process.env.SECRET_KEY = "secret";
 
 users.post("/register", (req, res) => {
   const today = new Date()
@@ -17,7 +17,7 @@ users.post("/register", (req, res) => {
     email: req.body.email,
     password: req.body.password,
     created: today
-  }
+  };
 
   User.findOne({
     email: req.body.email
@@ -32,16 +32,16 @@ users.post("/register", (req, res) => {
             })
             .catch(err => {
               res.send("Error: " + err)
-            })
-        })
+            });
+        });
       } else {
         res.json({ error: "user already exists, my friend" })
       }
     })
     .catch(err => {
       res.send("error: " + err)
-    })
-})
+    });
+});
 
 users.post("/login", (req, res) => {
   User.findOne({
@@ -58,7 +58,7 @@ users.post("/login", (req, res) => {
           }
           let token = jwt.sign(payload, process.env.SECRET_KEY, {
             expiresIn: 1440
-          })
+          });
           res.send(token)
         } else {
           res.json({ error: "User does not exist" })
@@ -69,8 +69,8 @@ users.post("/login", (req, res) => {
     })
     .catch(err => {
       res.send("error: " + err)
-    })
-})
+    });
+});
 
 users.get("/profile", (req, res) => {
   var decoded = jwt.verify(req.headers["authorization"], process.env.SECRET_KEY)
@@ -86,7 +86,7 @@ users.get("/profile", (req, res) => {
     })
     .catch(err => {
       res.send("error: " + err)
-    })
-})
+    });
+});
 
 module.exports = users;

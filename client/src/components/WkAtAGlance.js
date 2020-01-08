@@ -1,10 +1,10 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 
-import Monday from "./days/Monday"
-import Tuesday from "./days/Tuesday"
-import Wednesday from "./days/Wednesday"
-import Thursday from "./days/Thursday"
-import Friday from "./days/Friday"
+import Monday from "./days/Monday";
+import Tuesday from "./days/Tuesday";
+import Wednesday from "./days/Wednesday";
+import Thursday from "./days/Thursday";
+import Friday from "./days/Friday";
 
 class WkAtAGlance extends Component {
   render () {
@@ -29,8 +29,8 @@ class WkAtAGlance extends Component {
           <Friday />
         </div>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
-export default WkAtAGlance
+export default WkAtAGlance;
