@@ -4,6 +4,9 @@ Powered by:
 - the motivated user 
 - youtube
 
+Deployed website:
+https://omega-wo.herokuapp.com/
+
 Omega is a MERN stack app built by 
 Justin Lampe, Keaton Sentak, Ajay Kiri, for Penn Bootcamp January 2020. 
 
