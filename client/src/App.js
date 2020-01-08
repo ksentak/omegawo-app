@@ -1,15 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
-import Navbar from "./components/Navbar"
-import Landing from "./components/Landing"
-import Login from "./components/Login"
-import Register from "./components/Register"
-import Profile from "./components/Profile"
-import PYW from "./components/PlanYourWeek"
-import WAAG from "./components/WkAtAGlance"
-import BrowseEx from "./components/BrowseEx"
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Profile from "./components/Profile";
+import PYW from "./components/PlanYourWeek";
+import WAAG from "./components/WkAtAGlance";
+import BrowseEx from "./components/BrowseEx";
 
 function App() {
   return (
@@ -28,6 +28,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
