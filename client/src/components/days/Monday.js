@@ -5,7 +5,7 @@ import jwt_decode from "jwt-decode"
 class Monday extends Component {
 
   state = {
-    savedWorkouts: [],
+    savedWorkouts: []
 	}
 
 	componentDidMount() {
@@ -133,7 +133,7 @@ class Monday extends Component {
               {this.state.savedWorkouts.map(item =>
               <div className="wo-row" id="wo-row">
                 <div className="waag-wo-box">
-                  <span className="waag-wo">{item.workoutWO}</span>
+                  <span className="waag-wo" id="wo-item">{item.workoutWO}</span>
                 </div>
                 <div className="waag-wo-box">
                   <span className="waag-wo">{item.workoutReps}</span>
