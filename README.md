@@ -5,9 +5,7 @@ https://omega-wo.herokuapp.com/
 ---
 
 #### App Description
-1. Purpose
-
-The app allows a user to:
+* The app allows a user to:
 
 - Understand the basics of exercise and how to set up an exercise program. 
 - Use a provided YouTube link for each exercise to watch a video guide on how to perform that exercise properly. 
@@ -15,7 +13,7 @@ The app allows a user to:
 - Each workout is made up of selected exercises that the user plans to perform. 
 - The creation of a written workout makes the user more accountable and able to adhere to their proposed workout plan. 
 
-2. How it Works 
+* How it Works 
 
 - The front-end of the app was created using React. 
 - Json Web Token was used to allow the user to create an profile with an email login. This allows the user to access their account and workouts anytime they revisit the app. 
@@ -26,7 +24,7 @@ The app allows a user to:
 - The workouts are saved using MongoDB and axios API calls are used to retrieve them to the front end. 
 - The user can then access their workout on their smartphone or print out their workout and bring it with them to the fitness center. 
 
-3. To use the APP: 
+* To use the APP: 
 
 - Register on the app using your name, email and password. Then that email and password is used to login to the app. 
 - The user is advised to read the "Exercise Basics" to understand how to set exercise goals and create a workout plan based on those goals. 
