@@ -15,6 +15,18 @@ https://omega-wo.herokuapp.com/
 
 ###### How it Works 
 
+![Landing Page](./client/src/app-screenshots/landing.png)
+
+---
+
+![Build Workouts](./client/src/app-screenshots/Plan.png)
+
+---
+
+![Week at a Glance ](./client/src/app-screenshots/WeekGlance.png)
+
+---
+
 - The front-end of the app was created using React. 
 - Json Web Token was used to allow the user to create an profile with an email login. This allows the user to access their account and workouts anytime they revisit the app. 
 - The app provides basic information on exercise programs, what the different types of exercise are, how to create an exercise program based on goals, create an exercise program with specific workouts. 
