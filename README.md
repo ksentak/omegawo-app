@@ -1,7 +1,7 @@
 # Omega Workout Application
 
 #### Deployed App
-https://omega-wo.herokuapp.com/
+https://omegaworkout01.herokuapp.com/
 ---
 
 #### App Description
